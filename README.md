@@ -11,4 +11,8 @@ iface wlan0 inet dhcp
         pre-up wpa_supplicant -B -Dnl80211 -iwlan0 -c/etc/wpa_supplicant.conf
         
         post-down killall -q wpa_supplicant
+
+wpa_passphrase SSID Password | sudo tee /etc/wpa_supplicant.conf
+
+wpa_supplicant -c /etc/wpa_supplicant.conf -i wlan0
         
