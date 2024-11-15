@@ -1,6 +1,8 @@
 QT = core
-QT += network
 QT += serialport
+QT += network
+TARGET = udpserial
+
 CONFIG += c++17 cmdline
 
 SOURCES += \
